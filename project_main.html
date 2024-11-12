@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>solor</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+</head>
+<body>
+
+  <a-scene>
+    <a-assets>
+      <img id="sky" src="/2401680.jpg">
+      <a-asset-item id="mercury" src = "mercury.glb"></a-asset-item>
+      <a-asset-item id="venus" src = "/venus.glb"></a-asset-item>
+      <a-asset-item id="earth" src = "/earth.glb"></a-asset-item>
+      <a-asset-item id="mars" src = "/Untitled.glb"></a-asset-item>
+      <a-asset-item id="jupiter" src = "/jupiter.glb"></a-asset-item>
+      <a-asset-item id="saturn" src = "saturn.glb"></a-asset-item>
+      <a-asset-item id="uranus" src = "/uranus.glb"></a-asset-item>
+      <a-asset-item id="neptune" src = "/neptune.glb"></a-asset-item>
+
+    </a-assets>
+    
+
+    <a-sky src="#sky"></a-sky>
+    <a-camera position=" 0 0 300" rotation="0 50 0">
+      <a-entity cursor position="0 0 -1"
+                geometry ="primitive:sphere ; radius:0.005"
+                material = "color:#fffff;"></a-entity>
+     
+    </a-camera>
+    <a-sphere radius="70" color="#FCA00A" position="0 0 0"> </a-sphere>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+      <a-entity gltf-model="#mercury" position=" 0 0 80" scale="30 30 30" ></a-entity>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 -360 0; loop: true; dur: 20000">
+      
+      <a-entity gltf-model="#venus" position=" 0 0 110" scale="50 50 50">
+        
+      </a-entity>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+      
+      <a-entity gltf-model="#earth" position=" 0 0 180" scale="55 55 55">
+        
+      </a-entity>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000">
+      <a-entity gltf-model="#mars" position=" 0 0 230" scale="60 60 60">
+        
+      </a-entity>
+  
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 50000">
+      <a-entity gltf-model="#jupiter" position=" 0 0 310" scale="130 130 130">
+      </a-entity>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 60000">
+      
+        <a-entity gltf-model="#saturn" position=" 0 0 370" scale="120 120 120" rotation=" 5 0 0 ">
+          
+        </a-entity>
+      
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 -360 0; loop: true; dur: 70000">
+      <a-entity gltf-model="#uranus" position=" 0 0 440" scale="120 120 120">
+        
+       </a-entity>
+      
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 80000">
+      <a-entity gltf-model="#neptune" position=" 0 0 440" scale="80 80 80">
+       
+      </a-entity>
+     
+    </a-entity>
+    
+    <a-entity > <a-text id ="inf1"value="Welcome, to my VIRTUAL REALITY world !!                  click me to close"  geometry="primitive:plane;"  position="-2 1 293" scale="2 2  2" visible="true"
+                        event-set__resvis1="_event:click;visible:false"
+                        event-set__resvis2="_event:click;_target:#inf;visible:true"></a-text></a-entity>
+    <a-entity > <a-text id ="inf"value="We live inside the sun. Normally we think of the sun as being that big, hot ball of light 93 million miles (150 million km) away. But actually, the sun;s outer atmosphere extends far beyond its visible surface. Our planet orbits within this tenuous atmosphere                                                               click me to close"  geometry="primitive:plane;"  position="-1 0 295" visible="false"
+                        event-set__resvis3="_event:click;_target:#inf;visible:false"></a-text></a-entity>
+   
+  </a-scene>
+  
+</body>
+</html>
